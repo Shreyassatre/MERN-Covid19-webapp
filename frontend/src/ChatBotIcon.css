@@ -1,0 +1,189 @@
+.icon > a > img{
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.more-icon{
+    height: 3rem;
+    width: 3rem;
+    z-index: 1000;
+    position: fixed;
+    bottom: 3rem;
+    right: 3.7vw;
+    border-radius: 40%;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px gray;
+    transition: 0.3s;
+    padding:7px;
+    animation: blinking 1.5s linear infinite;
+    background: #ffffffa8;
+}
+
+.more-icon:hover{
+    animation: none;
+}
+
+.common-icon{
+    height: 4rem;
+    width: 4rem;
+    z-index: 1000;
+    position: fixed;
+    bottom: 3rem;
+    right: 3.7vw;
+    border-radius: 40%;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px gray;
+    transition: 0.3s;
+    padding:7px;
+    background: #ffffffa8;
+}
+
+.cancel-icon{
+    height: 3rem;
+    width: 3rem;
+    z-index: 1000;
+    position: fixed;
+    bottom: 3rem;
+    right: 3.7vw;
+    border-radius: 40%;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px gray;
+    transition: 0.3s;
+    padding:7px;
+    background: rgb(241, 169, 169);
+}
+
+@keyframes blinking{
+    0%{
+        height: 3.1rem;
+        width: 3.1rem;
+    }
+    25%{
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+    50%{
+        height: 3.7rem;
+        width: 3.7rem;   
+    }
+    70%{
+        height: 3.5rem;
+        width: 3.5rem;   
+    }
+    80%{
+        height: 3.3rem;
+        width: 3.3rem;
+    }
+    100%{
+        height: 3rem;
+        width: 3rem;
+    }
+  }
+
+.symbol1{
+    height: 4rem;
+    width: rem;
+    position: fixed;
+    bottom: 11.8rem;
+    right: 3vw;
+    border-radius: 40%;
+    box-shadow: 1px .5px 3px black;
+    padding:15px;
+}
+
+.symbol2{
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    bottom: 7rem;
+    right: 3vw;
+    border-radius: 40%;
+    box-shadow: 1px .5px 3px black;
+}
+
+.symbol1:hover{
+    box-shadow: 1px 1px 5px black;
+}
+
+.symbol2:hover{
+    box-shadow: 1px 1px 5px black;
+}
+
+@media (max-width: 730px)
+{
+    .icon > a > img{
+        height: 3rem;
+        width: 3rem;
+        z-index: 1000;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .more-icon{
+        height: 2rem;
+        width: 2rem;
+        z-index: 1000;
+        border-radius: 40%;
+        cursor: pointer;
+        position: fixed;
+        right: 4vw;
+    }
+    
+    .cancel-icon{
+        height: 2.5rem;
+        width: 2.5rem;
+        z-index: 1000;
+        border-radius: 40%;
+        cursor: pointer;
+        position: fixed;
+        right: 4.5vw;
+    }
+
+    .symbol1{
+        position: fixed;
+        bottom: 9.5rem;
+        border-radius: 40%;
+        right: 4vw;
+    }
+    
+    .symbol2{
+        position: fixed;
+        bottom: 6.3rem;
+        border-radius: 40%;
+        right: 4vw;
+    }
+
+    .common-icon{
+        height: 3rem;
+        width: 3rem;
+        position: fixed;
+        right: 5vw;
+    }
+
+    @keyframes blinking{
+        0%{
+            height: 2.1rem;
+            width: 2.1rem;
+        }
+        25%{
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+        50%{
+            height: 2.7rem;
+            width: 2.7rem;   
+        }
+        70%{
+            height: 2.5rem;
+            width: 2.5rem;   
+        }
+        80%{
+            height: 2.3rem;
+            width: 2.3rem;
+        }
+        100%{
+            height: 2rem;
+            width: 2rem;
+        }
+      }
+}

@@ -1,0 +1,28 @@
+.table{
+    margin-top: 20px;
+    overflow: scroll;
+    height: 66vh;
+    color: #6a5d5d;
+    background-color: #ffff;
+}
+
+/* .table tr{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.table tr:nth-of-type(odd){
+    background-color: #f3f2f8;
+}
+
+@media (max-width: 1320px) {
+    .table{
+        margin-top: 20px;
+        overflow: scroll;
+        height: 66vh;
+        width: 100vw;
+        color: #6a5d5d;
+    }
+  }
+
+

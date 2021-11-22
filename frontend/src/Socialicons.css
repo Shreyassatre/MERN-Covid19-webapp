@@ -1,0 +1,36 @@
+.facebook-i {
+    color: #4968ad;
+    margin-right: 5px;
+    font-size: 4vh;
+}
+
+.youtube-i {
+    color: #eb3223;
+    margin-right: 5px;
+    margin-left : 5px;
+    font-size: 4vh;
+}
+    
+.twitter-i {
+    color: #49a1eb;
+    margin-left : 5px;
+    font-size: 4vh;
+}
+  
+.insta-i {
+    color: black;
+    margin-right: 5px;
+    margin-left : 5px;
+    font-size: 4vh;
+}
+
+.linkedin-i {
+    color: #0a5a97;
+    margin-right: 6px;
+    margin-left : 6px;
+    font-size: 4vh;
+}
+
+.insta-i:hover, .twitter-i:hover, .facebook-i:hover, .youtube-i:hover, .linkedin-i:hover {
+    transform: translateY(-3px);
+  }
