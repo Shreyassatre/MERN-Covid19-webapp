@@ -1,56 +1,48 @@
 const router = require("express").Router();
-const LatestUpdates = require("../models/updates");
+const User = require("../models/updatesModel");
 
-router.post("/", async(req,res)=>{
+router.post("/", async (req, res)=>{
     try{
-        const addingUpdates = new LatestUpdates(req.body)
-        console.log(req.body);
-        const insertUpdates = await addingUpdates.save();
-        res.status(201).send(insertUpdates);
-    }catch(e){
-        res.status(400).send(e);
+        const {heading, note, news, source, image} = req.body;
+  
+        //save new user account to the database
+        const newFeedback = new User({
+            heading, 
+            note, 
+            news, 
+            source, 
+            image
+        });
+        
+  
+        await newFeedback.save();
+  
+    } catch (err) {
+        console.error(err);
+        res.status(500).send(); 
     }
-});
+  });
 
-router.get("/",async(req, res) => {
-    try{
-        const getUpates = await LatestUpdates.find({}).sort({"num":-1});
-        res.status(200).send(getUpates);
-    }catch(e){
-        res.status(400).send(e);
+  router.get("/", async (req, res) => {
+    try {
+      const feedbacks = await User.find({}).sort({"date":-1});
+      res.json(feedbacks);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send();
     }
-});
+  });
 
-router.get("/:id",async(req, res) => {
+  router.patch("/",async(req, res) => {
     try{
         const _id = req.params.id;
-        const getUpate = await LatestUpdates.findById({_id})
-        res.status(200).send(getUpate);
-    }catch(e){
-        res.status(400).send(e);
-    }
-});
-
-router.patch("/:id",async(req, res) => {
-    try{
-        const _id = req.params.id;
-        const getUpate = await LatestUpdates.findByIdAndUpdate(_id,req.body, {
+        const feedbacks = await User.findByIdAndUpdate(_id,req.body, {
             new:true
         })
-        res.send(getUpate);
+        res.send(feedbacks);
     }catch(e){
         res.status(500).send(e);
     }
 });
 
-router.delete("/:id",async(req, res) => {
-    try{
-        const _id = req.params.id;
-        const getUpate = await LatestUpdates.findByIdAndDelete({_id})
-        res.send("Update Deleted");
-    }catch(e){
-        res.status(500).send(e);
-    }
-});
-
-module.exports = router;
+  module.exports = router;

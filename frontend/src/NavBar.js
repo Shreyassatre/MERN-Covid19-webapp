@@ -68,7 +68,8 @@ function NavBar() {
                         {
                             loggedIn === true && (
                             <>
-                                <NavLink href="/admin">User Feedbakes</NavLink>
+                                <NavLink href="/admin">Update News</NavLink>
+                                <NavLink href="/feedbacks">User Feedbakes</NavLink>
                                 <NavLink href="/donations">Donations</NavLink>
                                 <NavLink href="/register">Register new admin</NavLink>
                                 <NavLink><LogOut/></NavLink>

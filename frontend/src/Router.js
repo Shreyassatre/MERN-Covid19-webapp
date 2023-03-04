@@ -30,6 +30,7 @@ import {Feedbackicon} from './ChatBotIcon'
 import Donation from './Donation';
 import DonarInfo from './DonarInfo';
 import DonationSucess from './DonationSucess';
+import Update from './Update';
 
 
 function Router() {
@@ -137,8 +138,11 @@ function Router() {
                 {
                     loggedIn === true && (
                     <>
-                        <Route exact path="/admin">
+                        <Route exact path="/feedbacks">
                             <Admin/>                   
+                        </Route>
+                        <Route exact path="/admin">
+                            <Update/>                   
                         </Route>
                         <Route exact path="/donations">
                             <DonarInfo/>
